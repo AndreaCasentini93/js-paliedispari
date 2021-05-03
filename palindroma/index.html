@@ -11,11 +11,14 @@
     </head>
 
     <body>
-        <label for="user-word">Enter a word, please.</label>
-        <input type="text" name="user-word" id="user-word">
-        <button onclick="calculator()">Calculate</button>
+        <div id="form-box">
+            <label for="enter-word">Enter a word, please.</label>
+            <input type="text" name="enter-word" id="enter-word">
+            <button onclick="calculator()">Calculate</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+        <p id="computer-response"></p>
 
-        <p id="palindrome"></p>
 
         <!-- SCRIPT JS -->
         <script src="js/script.js"></script>

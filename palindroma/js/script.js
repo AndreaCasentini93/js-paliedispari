@@ -21,20 +21,46 @@ function palindromeCalculator (word) {
 
 }
 
+// VARIABILI GET ELEMENT BY ID
+var computerResponse = document.getElementById("computer-response");
+var enterWord = document.getElementById("enter-word");
+
 function calculator () {
 
     // CHIEDI ALL'UTENTE UNA PAROLA
-    var userWord = document.getElementById("user-word").value;
+    enterWord = enterWord.value;
+    var userWord = enterWord;
 
-    // GENERA UNA RISPOSTA CHE SPECIFICA SE LA PAROLA INSERITA E' PALINDROMA OPPURE NO
-    var palindrome = palindromeCalculator (userWord);
-
-    console.log(palindrome);
-
-    if (palindrome) {
-        document.getElementById("palindrome").innerHTML = "The word " + userWord + " is palindrome."
+    // SOLO SE L'UTENTE INSERISCE UNA PAROLA COMPOSTA DA LETTERE IL CALCOLATORE FUNZIONA
+    if(!(userWord.trim() == "" || !isNaN(parseInt(userWord)) && typeof parseInt(userWord) == 'number')) {
+  
+        // GENERA UNA RISPOSTA CHE SPECIFICA SE LA PAROLA INSERITA E' PALINDROMA OPPURE NO
+        var palindrome = palindromeCalculator (userWord);
+    
+        if (palindrome) {
+            computerResponse.innerHTML = "The word <span id=\"word-style\">" + userWord + "</span> is palindrome."
+        } else {
+            computerResponse.innerHTML = "The word <span id=\"word-style\">" + userWord + "</span> isn't palindrome."
+        }
+    
     } else {
-        document.getElementById("palindrome").innerHTML = "The word " + userWord + " isn't palindrome."
+      
+        // GENERA UNA RISPOSTA DI ERRORE
+        computerResponse.innerHTML = "The word you entered is invalid, please try again."
+    
     }
+
+    // PULISCI L'INPUT TEXT
+    enterWord.value = "";
+
+}
+
+function reset () {
+
+    // PULISCI L'INPUT TEXT
+    enterWord.value = "";
+
+    // RIMUOVI IL MESSAGGIO DI RISPOSTA
+    computerResponse.innerHTML = "";
 
 }
