@@ -25,7 +25,7 @@ function even () {
     test1 = true;
 
     if (test2) {
-        formBox = "<button onclick=\"calculator()\">Play</button><button onclick=\"reset()\">Reset</button>";
+        formBox.innerHTML = "<button onclick=\"calculator()\">Play</button><button onclick=\"reset()\">Reset</button>";
     }
 
 }
@@ -39,7 +39,7 @@ function odd () {
     test1 = true;
 
     if (test2) {
-        formBox = "<button onclick=\"calculator()\">Play</button><button onclick=\"reset()\">Reset</button>";
+        formBox.innerHTML = "<button onclick=\"calculator()\">Play</button><button onclick=\"reset()\">Reset</button>";
     }
 
 }
