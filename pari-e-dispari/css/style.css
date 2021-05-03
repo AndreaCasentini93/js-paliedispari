@@ -39,9 +39,10 @@ button:hover {
 }
 
 hr {
-    height: 5px;
+    height: 8px;
     border-radius: 20px;
-    background-color: #228822;
+    background-color: #ffffff;
+    box-shadow: inset 0px 0px 5px #313131;
 }
 
 #container {
