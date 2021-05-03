@@ -24,6 +24,10 @@ function even () {
 
     test1 = true;
 
+    if (test2) {
+        formBox = "<button onclick=\"calculator()\">Play</button><button onclick=\"reset()\">Reset</button>";
+    }
+
 }
 
 // FUNZIONE DI SCELTA DISPARI
@@ -33,6 +37,10 @@ function odd () {
     userChoiceMessage.innerHTML = "User Choice: Odd";
 
     test1 = true;
+
+    if (test2) {
+        formBox = "<button onclick=\"calculator()\">Play</button><button onclick=\"reset()\">Reset</button>";
+    }
 
 }
 
@@ -45,6 +53,10 @@ function number () {
         userNumberMessage.innerHTML = "User number = " + userNumber;
 
         test2 = true;
+
+        if (test1) {
+            formBox.innerHTML = "<button onclick=\"calculator()\">Play</button><button onclick=\"reset()\">Reset</button>";
+        }
 
     }
 
@@ -108,6 +120,7 @@ function reset () {
 var enterNumber = document.getElementById("enter-number");
 var userChoiceMessage = document.getElementById("user-choice");
 var userNumberMessage = document.getElementById("user-number");
+var formBox = document.getElementById("form-box-3");
 var computerNumberMessage = document.getElementById("computer-number");
 var addictionMessage = document.getElementById("addiction-message");
 var endMessage = document.getElementById("end-message");
