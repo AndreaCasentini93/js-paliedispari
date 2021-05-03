@@ -28,6 +28,7 @@ button {
     margin: 0 5px;
     font-family: 'Indie Flower', cursive;
     font-size: 18px;
+    font-weight: bold;
     color: #ffffff;
     background-color: #32cd32;
     box-shadow: inset 0px 0px 10px #313131;
