@@ -43,6 +43,7 @@ button:hover {
 hr {
     height: 8px;
     border-radius: 20px;
+    border: unset;
     background-color: #87eb87;
     box-shadow: inset 0px 0px 5px #313131;
 }

@@ -5,20 +5,11 @@ function palindromeCalculator (word) {
 
     var wordReverse = "";
 
-    var i = --word.length;
-    while (i >= 0) {
-
+    for (var i = --word.length; i >= 0; i--) {
         wordReverse += word[i];
-
-        i--
     }
 
-    if (word == wordReverse) {
-        return true;
-    } else {
-        return false;
-    }
-
+    return word == wordReverse;
 }
 
 // FUNZIONE PULSANTE CALCOLATORE
