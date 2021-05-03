@@ -1,4 +1,4 @@
-// FONZIONE PER VALUTARE SE UNA PAROLA E' PALINDROMA
+// FONZIONI
 function palindromeCalculator (word) {
 
     word = word.toLowerCase()
@@ -21,15 +21,10 @@ function palindromeCalculator (word) {
 
 }
 
-// VARIABILI GET ELEMENT BY ID
-var computerResponse = document.getElementById("computer-response");
-var enterWord = document.getElementById("enter-word");
-
 function calculator () {
 
     // CHIEDI ALL'UTENTE UNA PAROLA
-    enterWord = enterWord.value;
-    var userWord = enterWord;
+    var userWord = enterWord.value;
 
     // SOLO SE L'UTENTE INSERISCE UNA PAROLA COMPOSTA DA LETTERE IL CALCOLATORE FUNZIONA
     if(!(userWord.trim() == "" || !isNaN(parseInt(userWord)) && typeof parseInt(userWord) == 'number')) {
@@ -64,3 +59,7 @@ function reset () {
     computerResponse.innerHTML = "";
 
 }
+
+// VARIABILI GET ELEMENT BY ID
+var computerResponse = document.getElementById("computer-response");
+var enterWord = document.getElementById("enter-word");
