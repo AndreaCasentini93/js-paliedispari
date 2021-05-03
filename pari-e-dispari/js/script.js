@@ -20,7 +20,7 @@ function evenOddNumber (number) {
 function even () {
 
     userChoice = "Even";
-    userChoiceMessage.innerHTML = "User Choice: Even";
+    userChoiceMessage.innerHTML = "Even";
 
     test1 = true;
 
@@ -34,7 +34,7 @@ function even () {
 function odd () {
 
     userChoice = "Odd";
-    userChoiceMessage.innerHTML = "User Choice: Odd";
+    userChoiceMessage.innerHTML = "Odd";
 
     test1 = true;
 
@@ -50,7 +50,7 @@ function number () {
     if (!isNaN(enterNumber.value) && enterNumber.value > 0 && enterNumber.value < 6) {
 
         userNumber = parseInt(enterNumber.value);
-        userNumberMessage.innerHTML = "User number = " + userNumber;
+        userNumberMessage.innerHTML = userNumber;
 
         test2 = true;
 
@@ -76,9 +76,9 @@ function calculator () {
         // COMUNICA L'ESITO DELLA PARTITA
         var result = evenOddNumber (addiction);
         
-        computerNumberMessage.innerHTML = "Computer number = " + computerNumber;
+        computerNumberMessage.innerHTML = computerNumber;
         
-        addictionMessage.innerHTML = "Total = " + addiction;
+        addictionMessage.innerHTML = addiction;
 
         if (result == userChoice) {
             endMessage.innerHTML = result + ", you won!";
