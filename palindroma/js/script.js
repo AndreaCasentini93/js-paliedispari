@@ -34,9 +34,9 @@ function calculator () {
         var palindrome = palindromeCalculator (userWord);
     
         if (palindrome) {
-            computerResponse.innerHTML = "The word <span id=\"word-style\">" + userWord + "</span> is palindrome.";
+            computerResponse.innerHTML = "The word \"<span id=\"word-style\">" + userWord + "</span>\" is palindrome.";
         } else {
-            computerResponse.innerHTML = "The word <span id=\"word-style\">" + userWord + "</span> isn't palindrome.";
+            computerResponse.innerHTML = "The word \"<span id=\"word-style\">" + userWord + "</span>\" isn't palindrome.";
         }
     
     } else {
