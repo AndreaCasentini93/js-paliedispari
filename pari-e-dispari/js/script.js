@@ -9,36 +9,111 @@ function randomNumber (min, max) {
 function evenOddNumber (number) {
 
     if (number % 2 == 0) {
-        return "even";
+        return "Even";
     } else {
-        return "odd";
+        return "Odd";
     }
+
+}
+
+// FUNZIONE DI SCELTA PARI
+function even () {
+
+    userChoice = "Even";
+    userChoiceMessage.innerHTML = "User Choice: Even";
+
+    test1 = true;
+
+}
+
+// FUNZIONE DI SCELTA DISPARI
+function odd () {
+
+    userChoice = "Odd";
+    userChoiceMessage.innerHTML = "User Choice: Odd";
+
+    test1 = true;
+
+}
+
+// FUNZIONE DI SCELTA NUMERO DA 1 A 5
+function number () {
+
+    if (!isNaN(enterNumber.value) && enterNumber.value > 0 && enterNumber.value < 6) {
+
+        userNumber = parseInt(enterNumber.value);
+        userNumberMessage.innerHTML = "User number = " + userNumber;
+
+        test2 = true;
+
+    }
+
+}
+
+// FUNZIONE PULSANTE CALCOLATORE
+function calculator () {
+
+    // PULSANTE CALCOLATORE SI ATTIVA SOLO SE SONO STATE FATTE ENTRAMBE LE SCELTE DALL'UTENTE
+    if (test1 && test2) {
+
+        // SOMMA NUMERO UTENTE E NUMERO RANDOM
+        var computerNumber = randomNumber (1, 5);
+
+        var addiction = userNumber + computerNumber;
+
+        // COMUNICA L'ESITO DELLA PARTITA
+        var result = evenOddNumber (addiction);
+        
+        computerNumberMessage.innerHTML = "Computer number = " + computerNumber;
+        
+        addictionMessage.innerHTML = "Total = " + addiction;
+
+        if (result == userChoice) {
+            endMessage.innerHTML = result + ", you won!";
+        } else {
+            endMessage.innerHTML = result + ", you lost...";
+        }
+
+        // BLOCCA IL PULSANTE CALCOLATORE
+        test1 = false;
+        test2 = false;
+
+    } else if (!test1 && !test2) {
+
+        enterNumber.value = "";
+        userChoiceMessage.innerHTML = "";
+        userNumberMessage.innerHTML = "";
+        computerNumberMessage.innerHTML = "";
+        addictionMessage.innerHTML = "";
+        endMessage.innerHTML = "";
+
+    }
+
+}
+
+// FUNZIONE DI RESET
+function reset () {
+
+    enterNumber.value = "";
+    userChoiceMessage.innerHTML = "";
+    userNumberMessage.innerHTML = "";
+    computerNumberMessage.innerHTML = "";
+    addictionMessage.innerHTML = "";
+    endMessage.innerHTML = "";
 
 }
 
 
 // VARIABILI GET ELEMENT BY ID
-var message = document.getElementById("message");
+var enterNumber = document.getElementById("enter-number");
+var userChoiceMessage = document.getElementById("user-choice");
+var userNumberMessage = document.getElementById("user-number");
+var computerNumberMessage = document.getElementById("computer-number");
+var addictionMessage = document.getElementById("addiction-message");
+var endMessage = document.getElementById("end-message");
 
-// SCELTE UTENTE: PARI O DISPARI / NUMERO DA 1 A 5
-var userChoice = prompt("Choose \"even\" or \"odd\", please.");
-
-var userNumber = parseInt(prompt("Choose a number from 1 to 5, please."));
-
-// SOMMA NUMERO UTENTE E NUMERO RANDOM
-var computerNumber = randomNumber (1, 5);
-
-var addiction = userNumber + computerNumber;
-
-// COMUNICA L'ESITO DELLA PARTITA
-var result = evenOddNumber (addiction);
-
-result = result.charAt(0).toUpperCase() + result.substring(1);
-
-userChoice = (userChoice.toLowerCase()).charAt(0).toUpperCase() + userChoice.substring(1);
-
-if (result == userChoice) {
-    message.innerHTML = result + ", you won!";
-} else {
-    message.innerHTML = result + ", you lost...";
-}
+// VARIABILI ESTERNE A FUNZIONI
+var userChoice;
+var userNumber;
+var test1 = false;
+var test2 = false;
