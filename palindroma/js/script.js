@@ -1,4 +1,4 @@
-// FONZIONI
+// FONZIONE PER CALCOLARE SE UNA PAROLA E' PALINDROMA
 function palindromeCalculator (word) {
 
     word = word.toLowerCase()
@@ -21,6 +21,7 @@ function palindromeCalculator (word) {
 
 }
 
+// FUNZIONE PULSANTE CALCOLATORE
 function calculator () {
 
     // CHIEDI ALL'UTENTE UNA PAROLA
@@ -50,6 +51,7 @@ function calculator () {
 
 }
 
+// FUNZIONE PULSANTE RESET
 function reset () {
 
     // PULISCI L'INPUT TEXT
