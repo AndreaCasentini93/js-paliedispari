@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: 100vh;
     font-family: 'Indie Flower', cursive;
+    background-image: linear-gradient(to right, #87eb87, #b5ffb5, #87eb87);
 }
 
 /* CONTAINER */

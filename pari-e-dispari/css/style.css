@@ -10,6 +10,7 @@ body {
     height: 100vh;
     font-weight: bold;
     font-family: 'Indie Flower', cursive;
+    background-image: linear-gradient(to right, #87eb87, #b5ffb5, #87eb87);
 }
 
 h1 {
@@ -42,7 +43,7 @@ button:hover {
 hr {
     height: 8px;
     border-radius: 20px;
-    background-color: #ffffff;
+    background-color: #87eb87;
     box-shadow: inset 0px 0px 5px #313131;
 }
 
@@ -116,7 +117,7 @@ hr {
 
 #messages p span {
     font-size: 35px;
-    color: #32cd32;
+    color: #228822;
 }
 
 #messages button {

@@ -92,12 +92,14 @@ function calculator () {
 
     } else if (!test1 && !test2) {
 
+        // PULISCI PAGINA
         enterNumber.value = "";
         userChoiceMessage.innerHTML = "";
         userNumberMessage.innerHTML = "";
         computerNumberMessage.innerHTML = "";
         addictionMessage.innerHTML = "";
         endMessage.innerHTML = "";
+        formBox.innerHTML = "";
 
     }
 
@@ -106,12 +108,18 @@ function calculator () {
 // FUNZIONE DI RESET
 function reset () {
 
+    // BLOCCA IL PULSANTE CALCOLATORE
+    test1 = false;
+    test2 = false;
+    
+    // PULISCI PAGINA
     enterNumber.value = "";
     userChoiceMessage.innerHTML = "";
     userNumberMessage.innerHTML = "";
     computerNumberMessage.innerHTML = "";
     addictionMessage.innerHTML = "";
     endMessage.innerHTML = "";
+    formBox.innerHTML = "";
 
 }
 
