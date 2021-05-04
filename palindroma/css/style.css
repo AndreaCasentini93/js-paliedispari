@@ -85,3 +85,8 @@ body {
     font-size: 45px;
     color: #228a22;
 }
+
+#container #word-style {
+    text-transform: uppercase;
+    color: #000000;
+}
